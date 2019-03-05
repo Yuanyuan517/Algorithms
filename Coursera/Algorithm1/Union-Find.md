@@ -28,3 +28,14 @@ connected components.
 hint: maintain an extra array to the weighted quick-union data structure that stores  
 for each root \mathtt{i}i the large element in the connected component containing \mathtt{i}i  
 
+add an array to contain the larger number when union 2 components, and we only store the value  
+in the root node, every time, we just need to traverse to the root node, we will get the max   
+number of components containing i.(lgN)  
+[link](https://truongtx.me/2018/05/01/union-find-summary-part-5)  
+
+** 3 ** Successor with delete. Given a set of nn integers S = \{ 0, 1, ... , n-1 \}  
+S={0,1,...,n−1} and a sequence of requests of the following form:  
+Remove xx from SS
+Find the successor of xx: the smallest yy in SS such that y \ge xy≥x.
+design a data type so that all operations (except construction) take logarithmic time or   
+better in the worst case.  
