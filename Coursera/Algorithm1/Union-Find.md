@@ -1,3 +1,9 @@
+### Union Find   
+Union-find algorithm is an algoríthm performing two operations-Union and Find on  
+a disjoint-set data structure.  
+Disjoint-set data structure: a data structure that tracks a set of elements partitioned  
+into a number of disjoint (non-overlapping) subsets.
+
 ### Interview Questions 
 **1 Social network connectivity.**   
 Given a social network containing nn members   
