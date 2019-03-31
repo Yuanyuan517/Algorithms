@@ -4,14 +4,14 @@ Union-find algorithm is an algoríthm performing two operations-Union and Find o
 - **find**: determinie which subset the element is in. 
 - **union**: join two subsets into a single subset [from geeksforgeeks](https://www.geeksforgeeks.org/union-find/ "from geeksforgeeks").
 
-####Implementations: 
+#### Implementations: 
 All based on a site-indexed array [algs.cs.princeton](https://algs4.cs.princeton.edu/15uf/ "algs.cs.princeton").
 - Quick-find: all sites in a same component have same value in id[]. So quick in find (1), but it needs to update the index of the whole subset everytime in uion, so slow in union (n).  
 - Quick-union: the id[] entry for for each site will be the name of another site in the same component. To implement find() we start at the given site, follow its link to another site, so forth, following links till reaching a root, a site that has a link to itself. Both union and find need time complexity to tree height. 
 - Weighted quick-union: we keep track of the size of each tree and always connect the smaller tree to the larger. Both union and find: lgN. 
 - weighted quick-union with path compression: Make all the nodes that we do examine directly link to the root. Very nearly but not quite 1. The amortized time per union, find, and connected operation has inverse Ackermann complexity. 
 
-####Remaining Questions:  
+#### Remaining Questions:  
 - Don't understand the 2nd while in the following ([from algs4 1.12](https://algs4.cs.princeton.edu/15uf/QuickUnionPathCompressionUF.java.html "from algs4 1.12"))
 `public int find(int p) {
         int root = p;
@@ -26,7 +26,7 @@ All based on a site-indexed array [algs.cs.princeton](https://algs4.cs.princeton
     }`
 - Check what is inverse Ackermann complexity[stackoverflow](https://stackoverflow.com/questions/44354922/why-is-the-inverse-ackermann-function-used-to-describe-complexity-of-kruskals-a).
 
-####Use Scenarios: 
+#### Use Scenarios: 
 - detect cycles: for each edge, make two subsets using both the vertices of the edge, If both the vertices are in the same subset, a cycle is found [to do and explain better from geeksforgeeks](https://www.geeksforgeeks.org/union-find/ "from geeksforgeeks").. 
 
 ### Interview Questions 
