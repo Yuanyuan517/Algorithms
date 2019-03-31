@@ -1,5 +1,5 @@
 ### Interview Questions 
-** 1 ** Social network connectivity. Given a social network containing nn members   
+**1 Social network connectivity.** Given a social network containing nn members   
 and a log file containing mm timestamps at which times pairs of members   
 formed friendships, design an algorithm to determine the earliest time at   
 which all members are connected (i.e., every member is a friend of a friend   
@@ -15,7 +15,7 @@ to 1, it means all members are connected and the timestamp is the earliest time 
 all members are connected.  
 
 
-** 2 ** Union-find with specific canonical element. Add a method \mathtt{find()}find() to  
+**2 Union-find with specific canonical element.**  Add a method \mathtt{find()}find() to  
 the union-find data type so that \mathtt{find(i)}find(i) returns the largest element  
 in the connected component containing ii. The operations, \mathtt{union()}union(),   
 \mathtt{connected()}connected(), and \mathtt{find()}find() should all take logarithmic  
@@ -33,7 +33,7 @@ in the root node, every time, we just need to traverse to the root node, we will
 number of components containing i.(lgN)  
 [link](https://truongtx.me/2018/05/01/union-find-summary-part-5)  
 
-** 3 ** Successor with delete. Given a set of nn integers S = \{ 0, 1, ... , n-1 \}  
+**3 Successor with delete.** Given a set of nn integers S = \{ 0, 1, ... , n-1 \}  
 S={0,1,...,n−1} and a sequence of requests of the following form:  
 Remove xx from SS
 Find the successor of xx: the smallest yy in SS such that y \ge xy≥x.
