@@ -11,6 +11,12 @@ All based on a site-indexed array [algs.cs.princeton](https://algs4.cs.princeton
 - Weighted quick-union: we keep track of the size of each tree and always connect the smaller tree to the larger. Both union and find: lgN. 
 - weighted quick-union with path compression: Make all the nodes that we do examine directly link to the root. Very nearly but not quite 1. The amortized time per union, find, and connected operation has inverse Ackermann complexity. 
 
+#### Assignment:  
+The problem is a 2 dimensional problem (each connected point is decided by a row value and a column value).  
+How to solve it?  
+1. convert the 2 dimensional idea into one dimension, like [solution link](https://github.com/maxgillett/coursera/blob/master/Algorithms%20Part%201/week1/percolation/src/main/java/Percolation.java)
+2. implement new structure using the Point object, which includes both row and column values.
+
 #### Remaining Questions:  
 - Don't understand the 2nd while in the following ([from algs4 1.12](https://algs4.cs.princeton.edu/15uf/QuickUnionPathCompressionUF.java.html "from algs4 1.12"))
 `public int find(int p) {
