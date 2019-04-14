@@ -98,4 +98,8 @@ Through the submission, I realized the errors I have made. In the following, I l
    }
 ```
 ### Summary
-To write more qualified code, the key is to practice and learn from others code, which is what I really need! Keep working!
+To write more qualified code, the key is to practice and learn from others code, which is what I really need! Keep working!  
+Other Good References:  
+[Good explanation of Backwash](https://nancyyihao.github.io/2017/12/24/Coursera-Algorithm-Part-One-Percolation/).  
+[Code Review, but no avoding in backwash](https://github.com/maxgillett/coursera/tree/master/Algorithms%20Part%201/week1).  
+
