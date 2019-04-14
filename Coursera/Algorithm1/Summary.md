@@ -75,17 +75,18 @@ public class Percolation {
    }
 }
 ```
-###Gains  
+### Gains  
 I really appreciate the high quality of the course including its lectures, ppt and assignments. Every time I can gain a lot after finishing it.  
 Through the submission, I realized the errors I have made. In the following, I listed the errors and my solution:  
 - Code style: for the variables that will be assigned just once, declare them with final, for constant used more than once, declare with static final (strictly, static should appear before final);
 - Check the legality of the arguments in the methods;
 - Coding Inspiration:
-- 	- the original Union-Find data structure(UF) just copes with one dimensional data, to avoid modifying the UF, the other way is to convert the 2 dimensional data input into 1 dimension (accoding to the arrangements of each point in the row and column).
-- 	- the time and space complexity are always essential in programming. To save time, we should have new ideas instead of using for loop to check the connection between each point in the bottom and each point in the top, how to check just one poin in the top and one point in the bottom? Then we get ideas by adding one virtual top and one virtual bottom.
+- 	- The original Union-Find data structure(UF) just copes with one dimensional data, to avoid modifying the UF, the other way is to convert the 2 dimensional data input into 1 dimension (accoding to the arrangements of each point in the row and column).
+- 	- The time and space complexity are always essential in programming. To save time, we should have new ideas instead of using for loop to check the connection between each point in the bottom and each point in the top, how to check just one poin in the top and one point in the bottom? Then we get ideas by adding one virtual top and one virtual bottom.
 - - as mentioned before about the backwash problem, how to solve it? 
-- - - One way is to use two UFs, which is also what I used. One is with a virtual top and a virtual bottom, the other is to use a flag, the exact implementation is in the [link](https://www.cnblogs.com/anne-vista/p/4841732.html "link").
-- 	- cache the data which can avoid same calculation more than once. So I increased the constructor parameters mean, stddev, and in the methods that use the two params, I check whether the two values are not 0, if they are 0, calculate. Like the following:  
+- - - one way is to use two UFs, which is also what I used. One is with a virtual top and a virtual bottom, the other is with only a virtual top to check the connectivity with the top (isFull?).
+- - - the other is to use a flag, the exact implementation is in the [link](https://www.cnblogs.com/anne-vista/p/4841732.html "link").
+- 	- Cache the data which can avoid same calculation more than once. So I increased the constructor parameters mean, stddev, and in the methods that use the two params, I check whether the two values are not 0, if they are 0, calculate. Like the following:  
 ```java
  public double confidenceHi()  {                
 	   // high endpoint of 95% confidence interval
