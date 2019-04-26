@@ -33,3 +33,7 @@ The constant a is determined by 2 factors:
 (1) System independent effects: algorithm and input data (determines exponent b)
 (2) System dependent effects: hardware (CPU, memory, cache, ...), software (compiler, interpreter, garbage collector, ...) and system (operating system, network, other apps, ...)
 So algorithm is quite important in deciding the application performance for programmers
+
+Next it talks about the order-of-growth:
+Check the graph: [functions](https://i.imgur.com/nV8EI1F.png)
+The order of growth for binary search is logarithmic (divide in half), for mergesort, it is linearithmic (divide and conquer).
