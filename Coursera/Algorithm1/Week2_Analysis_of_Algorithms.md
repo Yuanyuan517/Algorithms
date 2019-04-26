@@ -45,3 +45,27 @@ We have 3 commonly used notations in the algorithm theory:
 4. Tilde, ~ 10 N^2, to provide approximate model.
 Common mistake is interpreting big-Oh as an approximate model. 
 The course will focus on approximate models: use Tilde-notation.
+### Interview Questions
+1. **3-SUM in quadratic time** Design an algorithm for the 3-SUM problem that takes time proportional to n^2 in the worst case. You may assume that you can sort the nn integers in time proportional to n^2 or better.
+> Hint: given an integer 𝚡 and a sorted array 𝚊[] of nn distinct integers, design a linear-time algorithm to determine if there exists two distinct indices 𝚒 and 𝚓 such that 𝚊[𝚒]+𝚊[𝚓]==𝚡.
+```java
+ArrayList<Integer> data = new ArrayList<>(Integer);
+...
+Collections.sort(data);
+
+for (int i = 0; i < data.size()-2; i++) {
+	int j = i + 1;
+	int k = data.size() - 1;
+	while (j < k) {
+		int sum = data.get(i) + data.get(j) + data.get(k);
+		if (sum == 0) {
+			System.out.println("Found!");
+		} else {
+			if (sum >= 0)
+				k--;
+			else
+				j++;
+		}
+	}
+}
+```
