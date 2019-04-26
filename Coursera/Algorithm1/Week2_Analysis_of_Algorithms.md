@@ -37,3 +37,11 @@ So algorithm is quite important in deciding the application performance for prog
 Next it talks about the order-of-growth:
 Check the graph: [functions](https://i.imgur.com/nV8EI1F.png)
 The order of growth for binary search is logarithmic (divide in half), for mergesort, it is linearithmic (divide and conquer).
+
+We have 3 commonly used notations in the algorithm theory:
+1. Big Theta, to classify algorithms
+2. Big Oh, to develop upper bounds
+3. Big Omega, to develop lower bounds.
+4. Tilde, ~ 10 N^2, to provide approximate model.
+Common mistake is interpreting big-Oh as an approximate model. 
+The course will focus on approximate models: use Tilde-notation.
