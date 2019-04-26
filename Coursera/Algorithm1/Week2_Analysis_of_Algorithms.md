@@ -69,3 +69,28 @@ for (int i = 0; i < data.size()-2; i++) {
 	}
 }
 ```
+
+2. **Search in a bitonic array** An array is bitonic if it is comprised of an increasing sequence of integers followed immediately by a decreasing sequence of integers. Write a program that, given a bitonic array of nn distinct integer values, determines whether a given integer is in the array.
+
+Standard version: Use ∼3lgn compares in the worst case.
+Signing bonus: Use ∼2lgn compares in the worst case (and prove that no algorithm can guarantee to perform fewer than ∼2lgn compares in the worst case).
+> Hints: Standard version. First, find the maximum integer using ∼1lgn compares—this divides the array into the increasing and decreasing pieces.
+Signing bonus. Do it without finding the maximum integer.
+[3 lg n](https://www.geeksforgeeks.org/find-element-bitonic-array/ "3 lg n")
+```java
+if (key > arr[index]) { 
+            return -1; 
+        } else if (key == arr[index]) { 
+            return index; 
+        } else { 
+            int temp = ascendingBinarySearch(arr, 0, index - 1, key); 
+            if (temp != -1) { 
+                return temp; 
+            } 
+  
+            // Search in right of k  
+            return descendingBinarySearch(arr, index + 1, n - 1, key); 
+        } 
+```
+
+For sigining bonus, check [here](https://stackoverflow.com/questions/19372930/given-a-bitonic-array-and-element-x-in-the-array-find-the-index-of-x-in-2logn)
