@@ -74,7 +74,7 @@ for (int i = 0; i < data.size()-2; i++) {
 
 Standard version: Use ∼3lgn compares in the worst case.
 Signing bonus: Use ∼2lgn compares in the worst case (and prove that no algorithm can guarantee to perform fewer than ∼2lgn compares in the worst case).
-> Hints: Standard version. First, find the maximum integer using ∼1lgn compares—this divides the array into the increasing and decreasing pieces.
+> Hints: Standard version. First, find the maximum integer using ∼1lgn compares—this divides the array into the increasing and decreasing pieces.  
 Signing bonus. Do it without finding the maximum integer.
 [3 lg n](https://www.geeksforgeeks.org/find-element-bitonic-array/ "3 lg n")
 ```java
@@ -97,23 +97,23 @@ For sigining bonus, check [here](https://stackoverflow.com/questions/19372930/gi
 
 3. **Egg drop**. Suppose that you have an nn-story building (with floors 1 through n) and plenty of eggs. An egg breaks if it is dropped from floor TT or higher and does not break otherwise. Your goal is to devise a strategy to determine the value of TT given the following limitations on the number of eggs and tosses:
 
-Version 0: 1 egg, ≤T tosses.
-Version 1: ∼1lgn eggs and ∼1lgn tosses.
-Version 2: ∼lgT eggs and ∼2lgT tosses.
-Version 3: 2 eggs and ∼2√n‾‾ tosses.
-Version 4: 2 eggs and ≤c√T‾‾ tosses for some fixed constant c.
+Version 0: 1 egg, ≤T tosses.  
+Version 1: ∼1lgn eggs and ∼1lgn tosses.  
+Version 2: ∼lgT eggs and ∼2lgT tosses.  
+Version 3: 2 eggs and ∼2√n‾ tosses.  
+Version 4: 2 eggs and ≤c√T‾ tosses for some fixed constant c.  
 > Hints: 
-Version 0: sequential search.
-Version 1: binary search.
-Version 2: find an interval containing T of size ≤2T, then do binary search.
-Version 3: find an interval of size \sqrt n, then do sequential search. Note: can be improved to ∼2√n‾‾‾ tosses.
-Version 4: 1+2+3+…+t ∼ 1/2*t^2. Aim for c = 2√2‾‾‾​	 .
+Version 0: sequential search.  
+Version 1: binary search.  
+Version 2: find an interval containing T of size ≤2T, then do binary search.  
+Version 3: find an interval of size \sqrt n, then do sequential search. Note: can be improved to ∼2√n‾ tosses.  
+Version 4: 1+2+3+…+t ∼ 1/2*t^2. Aim for c = 2√2‾.  
 
-Version 1: Use binary search, first, try floor n/2, if does not break, it try floor n/2/2; if break, try floor (n+n/2)/2, continue trying on the mid point of the subset floors, till T is determined.
+Version 1: Use binary search, first, try floor n/2, if does not break, it try floor n/2/2; if break, try floor (n+n/2)/2, continue trying on the mid point of the subset floors, till T is determined.  
 
-Version 2: Start from floor 1 till floor 2^t that egg breaks, 2^(t-1) < T < 2^t, which means ∼lgT toss, then from 2^(t-1)+1 to 2^t, use version 1, another ∼lgT toss.
+Version 2: Start from floor 1 till floor 2^t that egg breaks, 2^(t-1) < T < 2^t, which means ∼lgT toss, then from 2^(t-1)+1 to 2^t, use version 1, another ∼lgT toss.  
 
-Version 3: It is like version 2, but instead of power 2, it uses sqrt n. The floors are divided into: [1, (sqrt n)-1],  [(sqrt n), 2*(sqrt n)-1], [2*(sqrt n), 3*(sqrt n)-1]...  If the egg breaks on k*(sqrt n), it means T is in the range [(k-1)(sqrt n), k*(sqrt n)-1], then the toss is another ∼(sqrt n)
+Version 3: It is like version 2, but instead of power 2, it uses sqrt n. The floors are divided into: [1, (sqrt n)-1],  [(sqrt n), 2*(sqrt n)-1], [2*(sqrt n), 3*(sqrt n)-1]...  If the egg breaks on k*(sqrt n), it means T is in the range [(k-1)(sqrt n), k*(sqrt n)-1], then the toss is another ∼(sqrt n) . 
 
-Version 4: from the [site](https://zhangxycc.github.io/2018/12/09/Coursera-Algorithm%20Week1%20Interview%20Questions/), but I don't understand too much, to check.
+Version 4: from the [site](https://zhangxycc.github.io/2018/12/09/Coursera-Algorithm%20Week1%20Interview%20Questions/), but I don't understand too much, to check.  
 
