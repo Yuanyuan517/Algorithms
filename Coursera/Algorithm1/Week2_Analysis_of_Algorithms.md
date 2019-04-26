@@ -3,7 +3,8 @@ First why we analyze algorithms:
 1. predict performance
 2. compare algorithms
 3. provide guarantees
-4. understand theoretical basis
+4. understand theoretical basis . 
+
 And the primary practical reason is to avoid performance bugs.
 To be able to solve a large practical input, our program should be not slow and running out of memory.
 Then we learn a framework for predicting performance and comparing algorithms:
@@ -21,7 +22,7 @@ Then we draw the log-log plot (very often the straight line), we see it is a str
 [log log plot](https://i.imgur.com/9yrfAmq.png)
 Then we can get the running time along with the input size.
 
-**Doubling hypothesis*** is a quick way  to estimate the slope in a power-law relationship.
+**Doubling hypothesis** is a quick way  to estimate the slope in a power-law relationship.
 Doubling means to double the size of the input. In the following link (from the [site](https://introcs.cs.princeton.edu/java/41analysis/ "site")), we can see the elapsed time increases by about a factor of 8(ratio) when the input size doubles. 
 lg ratio = b (slop) = 3
 [link](https://i.imgur.com/nPlc1PL.png)
