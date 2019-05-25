@@ -13,7 +13,7 @@ A: 2 methods:
 A. Notice that it is to design a data structure. So the idea to use an auxilliary stack to store the max element at each element is not very appropriate here. Then one possible idea is to use linklist to design the stack with one additional pointer, which points to an older max number if the current push modifies the largest max number by now.  
 There is a good [video](https://www.byte-by-byte.com/maxstack/ "video") talked about it from the view of the interviewer. Some points the speaker mentioned: before solving the problem, ask the data type to be handled(Integer, String or...); last in first out?  
 What to add is that in Hint provided by Coursera:  
-> Hint: Use two stacks, one to store all of the items and a second stack to store the maximums.  
+> Hint: Use two stacks, one to store all of the items and a second stack to store the maximums.    
 So we can use 2 stacks.
 3. Java generics. Explain why Java prohibits generic array creation.  
 A. In the book of [Algorithms](https://algs4.cs.princeton.edu/13stacks/ "Algorithms"), 1.3, it wrote: 
