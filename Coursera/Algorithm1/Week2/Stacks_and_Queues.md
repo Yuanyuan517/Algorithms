@@ -9,3 +9,6 @@ A: 2 methods:
 	idea: always enqueue into stack1, dequeue from stack2   
 	Approach: in enqueue, put the element at the top of stack1, when dequeue, if stack2 is empty, first pops all elements from stack1 to stack2, then moves the top element from stack2  
 	Analyze; enqueue O(1), dequeue O(n)   
+2. Stack with max. Create a data structure that efficiently supports the stack operations (push and pop) and also a return-the-maximum operation. Assume the elements are real numbers so that you can compare them.  
+A. Notice that it is to design a data structure. So the idea to use an auxilliary stack to store the max element at each element is not very appropriate here. Then one possible idea is to use linklist to design the stack with one additional pointer, which points to an older max number if the current push modifies the largest max number by now.  
+There is a good [video](https://www.byte-by-byte.com/maxstack/ "video") talked about it from the view of the interviewer. Some points the speaker mentioned: before solving the problem, ask the data type to be handled(Integer, String or...); last in first out?  
