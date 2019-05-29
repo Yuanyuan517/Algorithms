@@ -15,11 +15,15 @@ There is a good [video](https://www.byte-by-byte.com/maxstack/ "video") talked a
 What to add is that in Hint provided by Coursera:  
 > Hint: Use two stacks, one to store all of the items and a second stack to store the maximums.    
 So we can use 2 stacks.
-3. Java generics. Explain why Java prohibits generic array creation.  
+3. Java generics. Explain why Java prohibits generic array creation.    
 A. In the book of [Algorithms](https://algs4.cs.princeton.edu/13stacks/ "Algorithms"), 1.3, it wrote: 
 > The underlying cause is that arrays in Java are covariant, but generics are not. In other words, String[] is a subtype of Object[], but Stack<String> is not a subtype of Stack<Object>.   
+	
 But I am still not very clear, then i found [someone](https://stackoverflow.com/questions/2927391/whats-the-reason-i-cant-create-generic-array-types-in-java "someone") in stackoverflow wrote:
 > The reason this is impossible is that Java implements its Generics purely on the compiler level, and there is only one class file generated for each class. This is called Type Erasure.  
 
 At runtime, the compiled class needs to handle all of its uses with the same bytecode. So, new T[capacity] would have absolutely no idea what type needs to be instantiated.  
-Another better and more clear [answer](https://stackoverflow.com/a/33072474 "answer") states: in Java type information for type parameters is discarded by the compiler after compilation of code is done; therefore the type info is not available at run time. The process is called** type erasure**. The important point here is that since at run-time there is no type information, there is no way to ensure that we are not committing heap pollution.  
+Another better and more clear [answer](https://stackoverflow.com/a/33072474 "answer") states: in Java type information for type parameters is discarded by the compiler after compilation of code is done; therefore the type info is not available at run time. The process is called **type erasure**. The important point here is that since at run-time there is no type information, there is no way to ensure that we are not committing heap pollution.    
+
+Example:  
+`Item[] rQueue = new Item[2]: error: Cannot create a generic array of items`
